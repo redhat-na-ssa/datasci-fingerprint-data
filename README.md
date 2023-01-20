@@ -3,42 +3,46 @@ Data for ROSA / Sagemaker demo
 
 Disclaimer: Yes, storing large data blobs is not for `git`
 
-This data is intended to be extracted and grouped into subfolders named with classes to be inferred using [tf.keras.utils.image_dataset_from_directory](https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directoryhttps://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory).
-Three use cases for grouping this data come from the filenames `1__M_Left_little_finger_Obl`:
+Intended Usage:
+
+For model training. A model or series of models should be trained to predict below classes when an unseen or real fingerprint image is submitted.
+
+The data should be extracted and grouped into class name subfolders to infer labels with [tf.keras.utils.image_dataset_from_directory](https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directoryhttps://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory).
+Three use cases for grouping this data come from the filenames `1__M_Left_little_finger_Obl.png`:
 1. Gender: Male (M), Female (F)
 2. Hand: Left, Right
 3. Finger: index, middle, ring, little, thumb
 
-The directory structure should result in the below examples.
+The directory structure(s) should result similar to the examples below:
 
 ```commandline
 gender/
 ...male/
-......a_image_1.jpg
-......a_image_2.jpg
+......a_image_1.png
+......a_image_2.png
 ...female/
-......b_image_1.jpg
-......b_image_2.jpg
+......b_image_1.png
+......b_image_2.png
 ```
 
 ```commandline
 hand/
 ...left/
-......a_image_1.jpg
-......a_image_2.jpg
+......a_image_1.png
+......a_image_2.png
 ...right/
-......b_image_1.jpg
-......b_image_2.jpg
+......b_image_1.png
+......b_image_2.png
 ```
 
 ```commandline
 finger/
 ...index/
-......a_image_1.jpg
-......a_image_2.jpg
+......a_image_1.png
+......a_image_2.png
 ...middle/
-......b_image_1.jpg
-......b_image_2.jpg
+......b_image_1.png
+......b_image_2.png
 ...(etc.)/
 ```
 
